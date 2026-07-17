@@ -75,7 +75,7 @@ class MainWindow(QMainWindow):
     # init window
     #=================================================
     def _init_window(self) -> None:
-        self.setWindowTitle("Transactions GUI v2.0.0")
+        self.setWindowTitle("Transactions v1.0.0")
         self.resize(1800, 1000)
 
         self.panel = QWidget()
