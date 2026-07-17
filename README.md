@@ -56,28 +56,6 @@ Run:
 
 ---
 
-## Overrides
-
-Manual category corrections can be stored in:
-
-    overrides.json
-
-Example:
-
-    {
-        "transaction-id": {
-            "category": "Groceries",
-            "note": "Manual correction"
-        }
-    }
-
-Add to `.gitignore`:
-
-    # User config
-    overrides.json
-
----
-
 ## Privacy
 
 - No cloud services
