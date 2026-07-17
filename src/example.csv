@@ -1,0 +1,61 @@
+DATE COLUMN NAME;TYPE COLUMN NAME;PARTNER COLUMN NAME;AMOUNT COLUMN NAME;CURRENCY COLUMN NAME;MESSAGE COLUMN NAME
+2026-01-02;Card;ALDI;-34.21;EUR;POS purchase
+2026-01-03;Card;LIDL;-18.75;EUR;POS purchase
+2026-01-04;Transfer;Employer Ltd.;3200.00;EUR;Salary January
+2026-01-05;Card;MÜLLER;-27.40;EUR;POS purchase
+2026-01-06;Transfer;Bank;-450.00;EUR;Loan repayment
+2026-01-07;Card;OMV;-62.13;EUR;Fuel
+2026-01-08;Card;SPAR;-52.66;EUR;POS purchase
+2026-01-09;Card;DM 144;-21.87;EUR;POS purchase
+2026-01-10;Transfer;TELEKOM;-39.99;EUR;Monthly bill
+2026-01-11;Card;OBI;-89.90;EUR;POS purchase
+2026-01-12;Card;IKEA;-145.30;EUR;POS purchase
+2026-01-13;Card;DECATHLON;-78.40;EUR;POS purchase
+2026-01-14;Card;ExampleShop;-19.99;EUR;Online order
+2026-01-15;Card;ALDI;-28.12;EUR;POS purchase
+2026-01-16;Card;LIDL;-46.33;EUR;POS purchase
+2026-01-17;Card;SPAR;-15.24;EUR;POS purchase
+2026-01-18;Card;MÜLLER;-31.12;EUR;POS purchase
+2026-01-19;Card;DM 205;-17.85;EUR;POS purchase
+2026-01-20;Card;OMV;-71.04;EUR;Fuel
+2026-01-21;Card;PRAKTIKER;-64.50;EUR;POS purchase
+2026-01-22;Card;ExampleShop;-12.45;EUR;Online order
+2026-01-23;Card;ALDI;-56.90;EUR;POS purchase
+2026-01-24;Card;LIDL;-22.14;EUR;POS purchase
+2026-01-25;Card;SPAR;-49.11;EUR;POS purchase
+2026-01-26;Transfer;Bank;-450.00;EUR;Loan repayment
+2026-01-27;Card;OBI;-134.99;EUR;POS purchase
+2026-01-28;Card;IKEA;-24.99;EUR;POS purchase
+2026-01-29;Card;OMV;-58.88;EUR;Fuel
+2026-01-30;Transfer;TELEKOM;-39.99;EUR;Monthly bill
+2026-01-31;Transfer;Employer Ltd.;3200.00;EUR;Salary February
+2026-02-01;Card;ALDI;-44.50;EUR;POS purchase
+2026-02-02;Card;LIDL;-19.84;EUR;POS purchase
+2026-02-03;Card;MÜLLER;-15.62;EUR;POS purchase
+2026-02-04;Card;DM 144;-36.20;EUR;POS purchase
+2026-02-05;Card;DECATHLON;-92.00;EUR;POS purchase
+2026-02-06;Card;ExampleShop;-42.99;EUR;Online order
+2026-02-07;Card;SPAR;-67.42;EUR;POS purchase
+2026-02-08;Card;ALDI;-26.33;EUR;POS purchase
+2026-02-09;Card;OMV;-83.90;EUR;Fuel
+2026-02-10;Card;PRAKTIKER;-58.70;EUR;POS purchase
+2026-02-11;Card;IKEA;-19.90;EUR;POS purchase
+2026-02-12;Card;LIDL;-33.45;EUR;POS purchase
+2026-02-13;Card;SPAR;-54.77;EUR;POS purchase
+2026-02-14;Transfer;Bank;-450.00;EUR;Loan repayment
+2026-02-15;Transfer;TELEKOM;-39.99;EUR;Monthly bill
+2026-02-16;Card;ALDI;-14.60;EUR;POS purchase
+2026-02-17;Card;DM 205;-28.34;EUR;POS purchase
+2026-02-18;Card;OBI;-96.10;EUR;POS purchase
+2026-02-19;Card;ExampleShop;-18.80;EUR;Online order
+2026-02-20;Card;MÜLLER;-24.55;EUR;POS purchase
+2026-02-21;Card;LIDL;-61.92;EUR;POS purchase
+2026-02-22;Card;SPAR;-38.27;EUR;POS purchase
+2026-02-23;Card;OMV;-65.77;EUR;Fuel
+2026-02-24;Card;DECATHLON;-49.99;EUR;POS purchase
+2026-02-25;Card;ALDI;-41.16;EUR;POS purchase
+2026-02-26;Card;LIDL;-17.53;EUR;POS purchase
+2026-02-27;Card;SPAR;-29.75;EUR;POS purchase
+2026-02-28;Transfer;Employer Ltd.;3200.00;EUR;Salary March
+2026-03-01;Transfer;TELEKOM;-39.99;EUR;Monthly bill
+2026-03-02;Transfer;Bank;-450.00;EUR;Loan repayment
