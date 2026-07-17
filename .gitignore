@@ -1,4 +1,6 @@
 # User config
+src/config_local.py
+src/*.csv
 src/overrides.json
 
 # Python
