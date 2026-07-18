@@ -303,6 +303,9 @@ class UIManager:
         default_label: str,
         label_attr: str | None = "value",
     ) -> None:
+
+        current_data = cb.currentData()
+
         with QSignalBlocker(cb):
             cb.clear()
             # default has no member equivalent, store None as its data
@@ -314,7 +317,13 @@ class UIManager:
                 label = item if label_attr is None else getattr(item, label_attr)
                 cb.addItem(str(label), item)
 
-            cb.setCurrentIndex(0)
+            # restore previous selection if it still exists
+            index = cb.findData(current_data)
+
+            if index >= 0:
+                cb.setCurrentIndex(index)
+            else:
+                cb.setCurrentIndex(0)
 
     def _sync_category_show_checkboxes(self, category: Category | None) -> None:
         if category == Category.MAJOR_EXPENSES:
@@ -402,6 +411,8 @@ class UIManager:
         # only trigger popup when category column is clicked
         if col == CATEGORY_COL:
             if self._open_category_dialog(tx):
+                # category may become available after override
+                self.update_category_dropdown()
                 self.refresh_ui()
             return
 
