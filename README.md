@@ -46,7 +46,35 @@ The application imports CSV files, automatically categorizes transactions, suppo
 ---
 
 ## Usage
-CSV selection  
+1. Download a transaction list in CSV format from your online banking portal
+    - supported delimiter: `";"`
+    - supported date formats:
+      - 2025.12.31
+      - 2025-12-31
+      - 2025-12-31 14:30:45
+      - 12/31/2025
+2. Create your own Bank format in `config.py` to correctly detect CSV headers:
+
+  ```python
+  KNOWN_BANK_FORMATS: list[CSVFormat] = [
+      CSVFormat(
+          bank=Bank.MY_BANK,
+          date_col="MyDateColumn",
+          type_col="MyTypeColumn",
+          partner_col="MyPartnerColumn",
+          amount_col="MyAmountColumn",
+          currency_col="MyCurrencyColumn",
+          message_col="MyMessageColumn",
+      ),
+  ]
+  ```
+  - Add your bank to `Bank` enum in `models.py`
+    ```python
+    class Bank(StrEnum):
+      EXAMPLE = "ExampleBank"
+      MY_BANK = "MyBank"
+    ```
+3. Start `transactions-app.py` and select your CSV
 <img width="402" height="332" alt="image" src="https://github.com/user-attachments/assets/c725dacf-4a51-4d9e-8c45-19a714f3802f" />
 
 GUI
