@@ -55,6 +55,7 @@ class TimeRange(Enum):
     ONE_YEAR = ("Last 1 year", 12)
     SIX_MONTHS = ("Last 6 months", 6)
     THREE_MONTHS = ("Last 3 months", 3)
+    ONE_MONTHS = ("Last month", 1)
 
     @property
     def label(self) -> str:
