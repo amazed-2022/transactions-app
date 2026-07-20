@@ -344,7 +344,7 @@ class MainWindow(QMainWindow):
         chart_table_splitter.setStretchFactor(0, 51)
         chart_table_splitter.setStretchFactor(1, 20)
 
-        main_layout.addWidget(chart_table_splitter, 4)
+        main_layout.addWidget(chart_table_splitter)
         self.panel.setLayout(main_layout)
 
     #==================================
