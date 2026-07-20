@@ -222,7 +222,7 @@ class MainWindow(QMainWindow):
         control_layout.setColumnStretch(1, 1)
         control_layout.setColumnStretch(2, 1)
 
-        # use rowSpan for text output, and give it more stretch
+        # rowSpan=2 so the text output occupies both rows
         control_layout.addWidget(self._build_text_container(), 0, 3, 2, 1)
         control_layout.setColumnStretch(3, 3)
 
