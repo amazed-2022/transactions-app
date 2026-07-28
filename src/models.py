@@ -67,9 +67,9 @@ class TimeRange(Enum):
 
 
 class Category(StrEnum):
-    BANK_FEES = "Bank fees"
     CASH = "Cash"
     SALARY = "Salary"
+    BANK_FEES = "Bank fees"
     PENSION_FUND = "Pension fund"
     LOAN_REPAY = "Loan repayment"
     LOAN_PREPAY = "Loan prepayment"
@@ -85,6 +85,8 @@ class Category(StrEnum):
     CLOTHES = "Clothes"
     TECH = "Tech"
     HOBBY = "Hobby"
+    CAMERA = "Camera"
+    PC = "PC"
 
     HOLIDAY = "Holiday"
     RESTAURANT = "Restaurant"
