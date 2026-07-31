@@ -204,16 +204,12 @@ class UIManager:
         if title:
             self.ui.log(title)
 
-        self.ui.log(
-            f"Total amount: {formatted_total} {currency}"
-        )
-        self.ui.log(
-            f"Monthly average: {formatted_avg} {currency}",
-            bold=True,
-        )
-        self.ui.log(
-            f"Calculation period: {months} months"
-        )
+        if months > 1:
+            self.ui.log(f"Total amount: {formatted_total} {currency}")
+            self.ui.log(f"Monthly average: {formatted_avg} {currency}", bold=True)
+            self.ui.log(f"Calculation period: {months} months")
+        else:
+            self.ui.log(f"Amount for the month: {formatted_total} {currency}", bold=True)
 
     def _print_statistics(
             self,

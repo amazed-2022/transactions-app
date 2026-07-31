@@ -164,6 +164,8 @@ class MainWindow(QMainWindow):
         text_layout.setContentsMargins(0, 0, 0, 0)
 
         self.text_output = QTextEdit()
+        self.text_output.setReadOnly(True)
+
         # horizontal ignored, vertical allowed
         self.text_output.setSizePolicy(
             QSizePolicy.Policy.Expanding,

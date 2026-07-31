@@ -47,15 +47,15 @@ class ChartMode(StrEnum):
 
 
 class TimeRange(Enum):
-    TEN_YEARS = ("Last 10 years", 120)
-    FIVE_YEARS = ("Last 5 years", 60)
-    THREE_YEARS = ("Last 3 years", 36)
-    TWO_YEARS = ("Last 2 years", 24)
-    ONE_AND_HALF_YEAR = ("Last 1.5 year", 18)
-    ONE_YEAR = ("Last 1 year", 12)
-    SIX_MONTHS = ("Last 6 months", 6)
-    THREE_MONTHS = ("Last 3 months", 3)
     ONE_MONTHS = ("Last month", 1)
+    THREE_MONTHS = ("Last 3 months", 3)
+    SIX_MONTHS = ("Last 6 months", 6)
+    ONE_YEAR = ("Last 1 year", 12)
+    ONE_AND_HALF_YEAR = ("Last 1.5 year", 18)
+    TWO_YEARS = ("Last 2 years", 24)
+    THREE_YEARS = ("Last 3 years", 36)
+    FIVE_YEARS = ("Last 5 years", 60)
+    TEN_YEARS = ("Last 10 years", 120)
 
     @property
     def label(self) -> str:
