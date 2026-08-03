@@ -27,16 +27,31 @@ from PySide6.QtWidgets import (
 #=================================================
 # TABLE DEFINITIONS
 #=================================================
-def get_bank(tx): return tx.bank
-def get_date(tx): return tx.booking_date.strftime("%Y-%m-%d")
-def get_partner(tx): return tx.partner_raw
-def get_amount(tx): return int(tx.amount)
-def get_currency(tx): return tx.currency
-def get_category(tx): return tx.category.value
-def get_direction(tx): return tx.direction.value
-def get_note(tx): return tx.note
+def get_bank(tx: Transaction) -> Bank:
+    return tx.bank
 
-TABLE_COLUMNS = [
+def get_date(tx: Transaction) -> str:
+    return tx.booking_date.strftime("%Y-%m-%d")
+
+def get_partner(tx: Transaction) -> str:
+    return tx.partner_raw
+
+def get_amount(tx: Transaction) -> int:
+    return int(tx.amount)
+
+def get_currency(tx: Transaction) -> str:
+    return tx.currency
+
+def get_category(tx: Transaction) -> str:
+    return tx.category.value
+
+def get_direction(tx: Transaction) -> str:
+    return tx.direction.value
+
+def get_note(tx: Transaction) -> str:
+    return tx.note
+
+TABLE_COLUMNS: list[dict[str, Any]] = [
     {"key": "bank", "name": "Bank", "width": 80, "align": "center", "getter": get_bank},
     {"key": "date", "name": "Date", "width": 80, "align": "center", "getter": get_date},
     {"key": "partner", "name": "Partner", "width": 180, "align": "left", "getter": get_partner},
@@ -47,7 +62,7 @@ TABLE_COLUMNS = [
     # {"key": "direction", "name": "Direction", "width": 80, "align": "center", "getter": get_direction},
 ]
 
-# tell the type checker, this is a str
+# tell the type checker, this is a string
 TABLE_HEADERS = [cast(str, c["name"]) for c in TABLE_COLUMNS]
 COLUMN_INDEX = {c["key"]: i for i, c in enumerate(TABLE_COLUMNS)}
 CATEGORY_COL = COLUMN_INDEX["category"]
