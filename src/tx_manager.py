@@ -207,7 +207,7 @@ class TxManager:
 
     def get_transactions_for_time_range(
         self,
-        time_range: TimeRange
+        time_range: TimeRange | None
     ) -> list[Transaction]:
 
         # ALL case
