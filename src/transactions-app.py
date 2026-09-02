@@ -368,7 +368,7 @@ class MainWindow(QMainWindow):
             fmt.setForeground(QColor(color))
 
         cursor.insertText(f"{message}\n", fmt)
-        # self.text_output.setTextCursor(cursor)
+        self.text_output.setTextCursor(cursor)
         # self.text_output.setFocus()
 
     #==================================
