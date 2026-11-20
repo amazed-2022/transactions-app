@@ -2,6 +2,7 @@
 # IMPORT
 #=================================================
 from dataclasses import dataclass
+from datetime import date
 from dateutil.relativedelta import relativedelta
 from decimal import Decimal
 import re
@@ -48,12 +49,25 @@ class TxManager:
         return len(self.transactions) > 0
 
     @property
+    def latest_transaction_date(self) -> date | None:
+        if not self.transactions:
+            return None
+
+        # txs are sorted newest first during process_transactions
+        return self.transactions[0].booking_date
+
+    @property
     def last_month_is_incomplete(self) -> bool:
         if not self.transactions:
             return False
 
-        last_tx_date = max(tx.booking_date for tx in self.transactions)
-        return last_tx_date.day < self.INCOMPLETE_MONTH_THRESHOLD_DAY
+        return (
+            self.latest_transaction_date.day
+            < self.INCOMPLETE_MONTH_THRESHOLD_DAY
+        )
+
+        # last_tx_date = max(tx.booking_date for tx in self.transactions)
+        # return last_tx_date.day < self.INCOMPLETE_MONTH_THRESHOLD_DAY
 
     @property
     def available_years(self) -> list[int]:
@@ -217,8 +231,11 @@ class TxManager:
         if not self.transactions:
             return []
 
-        # latest transaction date
-        last_date = max(tx.booking_date for tx in self.transactions)
+        # last_date = max(tx.booking_date for tx in self.transactions)
+        last_date = self.latest_transaction_date
+
+        if last_date is None:
+            return []
 
         # start of the selected calendar-month period
         # last_date.replace(day=1) does not modify last_date
